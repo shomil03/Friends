@@ -8,12 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var UserData = [User]()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack{
+            List{
+                ForEach(UserData){user in
+                    NavigationLink{
+                        DetailView(user: user)
+                    }label:{
+                        HStack{
+                            Text(user.name)
+                                .font(.title3)
+                                .fontWeight(.semibold)
+                            Spacer()
+                            ActivityView(isactive: user.isActive)
+                                .padding(.horizontal)
+                        }
+                    }
+                }
+            }
+            .listStyle(.inset)
+                .navigationTitle("Peoples")
+        }
+        .onAppear{
+            if(UserData.isEmpty){
+                Task{
+                    do{
+                        UserData =  try await NetworkManager.shared.NetworkCall()
+//                        print(UserData)
+                    }catch{}
+                }
+            }
         }
         .padding()
     }

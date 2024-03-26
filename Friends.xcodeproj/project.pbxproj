@@ -11,6 +11,10 @@
 		4FE94AB12BB334BD00AAFB5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE94AB02BB334BD00AAFB5F /* ContentView.swift */; };
 		4FE94AB32BB334BF00AAFB5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE94AB22BB334BF00AAFB5F /* Assets.xcassets */; };
 		4FE94AB62BB334BF00AAFB5F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE94AB52BB334BF00AAFB5F /* Preview Assets.xcassets */; };
+		4FE94ABD2BB334FC00AAFB5F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE94ABC2BB334FC00AAFB5F /* User.swift */; };
+		4FE94ABF2BB335CD00AAFB5F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE94ABE2BB335CD00AAFB5F /* NetworkManager.swift */; };
+		4FE94AC12BB3475900AAFB5F /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE94AC02BB3475900AAFB5F /* DetailView.swift */; };
+		4FE94AC32BB348FC00AAFB5F /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE94AC22BB348FC00AAFB5F /* ActivityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		4FE94AB02BB334BD00AAFB5F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4FE94AB22BB334BF00AAFB5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FE94AB52BB334BF00AAFB5F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4FE94ABC2BB334FC00AAFB5F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4FE94ABE2BB335CD00AAFB5F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4FE94AC02BB3475900AAFB5F /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		4FE94AC22BB348FC00AAFB5F /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,10 @@
 			children = (
 				4FE94AAE2BB334BD00AAFB5F /* FriendsApp.swift */,
 				4FE94AB02BB334BD00AAFB5F /* ContentView.swift */,
+				4FE94AC22BB348FC00AAFB5F /* ActivityView.swift */,
+				4FE94AC02BB3475900AAFB5F /* DetailView.swift */,
+				4FE94ABE2BB335CD00AAFB5F /* NetworkManager.swift */,
+				4FE94ABC2BB334FC00AAFB5F /* User.swift */,
 				4FE94AB22BB334BF00AAFB5F /* Assets.xcassets */,
 				4FE94AB42BB334BF00AAFB5F /* Preview Content */,
 			);
@@ -137,8 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FE94ABF2BB335CD00AAFB5F /* NetworkManager.swift in Sources */,
 				4FE94AB12BB334BD00AAFB5F /* ContentView.swift in Sources */,
 				4FE94AAF2BB334BD00AAFB5F /* FriendsApp.swift in Sources */,
+				4FE94AC12BB3475900AAFB5F /* DetailView.swift in Sources */,
+				4FE94ABD2BB334FC00AAFB5F /* User.swift in Sources */,
+				4FE94AC32BB348FC00AAFB5F /* ActivityView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
