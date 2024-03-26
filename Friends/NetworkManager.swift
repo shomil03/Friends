@@ -9,12 +9,12 @@ import Foundation
 import SwiftUI
 
 class NetworkManager{
+    @Environment(\.modelContext) var modelContext
     let url = "https://www.hackingwithswift.com/samples/friendface.json"
     static let shared = NetworkManager()
     func NetworkCall() async throws -> [User]{
 //        check validity of url
         guard let url = URL(string: url) else{
-//            return [User(name: "WrongURL", id: UUID(), age: 1, company: "", email: "", abount: "", registered: Date.now, tags: [] )]
             return []
         }
         
@@ -24,10 +24,10 @@ class NetworkManager{
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
             let users = try decoder.decode([User].self, from: data)
+            
             print(users[0].registered)
             return users
         }catch{
-//            return [User(name: "InCatchblock", id: UUID(), age: 1, company: "", email: "", abount: "", registered: Date.now, tags: [])]
             return []
         }
     }

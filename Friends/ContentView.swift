@@ -6,13 +6,16 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
     @State var UserData = [User]()
+    @Environment(\.modelContext) var modelContext
+    @Query var users : [User]
     var body: some View {
         NavigationStack{
             List{
-                ForEach(UserData){user in
+                ForEach(users){user in
                     NavigationLink{
                         DetailView(user: user)
                     }label:{
@@ -35,12 +38,17 @@ struct ContentView: View {
                 Task{
                     do{
                         UserData =  try await NetworkManager.shared.NetworkCall()
-//                        print(UserData)
+                        save(users: UserData)
                     }catch{}
                 }
             }
         }
         .padding()
+    }
+    func save(users : [User]){
+        for user in users{
+            modelContext.insert(user)
+        }
     }
 }
 
